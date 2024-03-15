@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trend Fit 로그인</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../static/inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/inc/animations/css/animate.min.css">
+		<link rel="stylesheet" href="../static/inc/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.theme.css">
+
+        <link rel="stylesheet" href="../static/css/reset.css">
+		<link rel="stylesheet" href="../static/css/login.css">
+		<link rel="stylesheet" href="../static/css/mobile.css">
+
+		<link rel="stylesheet" href="../static/css/skin/cool-gray.css">
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+    <div class="page-loader"></div>  <!-- 로딩 화면 -->
+    <div class="body">
+    
+        <!--========== 헤더 ==========-->
+        <header id="header" class="header-main">
+
+            <!-- 상단 네비게이션 -->
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+
+              <div class="container">
+                
+                <!-- 로고 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="Main.html">Trend fit</a>
+                  </div>
+
+                <!-- 스크롤 이동 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">                           
+                        <li><a class="page-scroll" href="Board.html">게시판</a></li>
+                        <li><a href="Login.html">로그인</a></li>
+                    </ul>
+                </div><!-- 스크롤 이동 끝 -->
+              </div>
+            </nav>
+            <!-- 네비게이션 끝 -->
+
+        </header>
+        <!-- ========= 헤더 끝 =========-->
+
+        
+
+        <!-- 로그인 -->
+        <div class="container">
+            <div class="wrapper">
+                <div class="title"><span>Trend Fit</span></div>
+                <form method="POST">
+                    {{ form.csrf_token }}
+                    <div>
+                        <i class="fa fa-user"></i>
+                        {{ form.userid.label("아이디") }}
+                        {{ form.userid(class="form-control", placeholder="아이디") }}
+                    </div>
+                    <br>
+                    <div>
+                        <i class="fa fa-lock"></i>
+                        {{ form.password.label("비밀번호") }}
+                        {% if form.password.errors %}
+                            {{ form.password.errors.0 }}
+                        {% endif %}
+                        {{ form.password(class="form-control", placeholder="비밀번호") }}
+                    </div>
+                    <br>
+                    <div class="pass"><a href="#">비밀번호 찾기</a></div>
+                    <div class="row button">
+                        <input type="submit" value="로그인">
+                    </div>
+                    <div class="signup-link">처음오신다면? <a href="Register.html">지금 회원가입 하러가기</a></div>
+                </form>
+            </div>
+        </div>
+        <!-- 로그인 끝 -->
+
+
+
+
+
+
+        <!-- 푸터 -->
+        <footer class="text-off-white">
+            
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row wow bounceInLeft" data-wow-delay="0.4s">
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4>자주하는 질문</h4>
+                            <ul class="imp-links">
+                                <li><a href="">고객센터</a></li>
+                                <li><a href="">서비스 약관</a></li>
+                                <li><a href="">저작권 약관</a></li>
+                                <li><a href="">정보관리 약관</a></li>
+                                <li><a href="">오시는 길</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="col-sm-6 col-md-4">
+                            <h4>구독하기</h4>
+                            <div id="footer_signup">
+                                <div id="email">
+                                    <form id="subscribe" method="POST">
+                                        <input type="text" placeholder="email을 입력하세요" name="email" id="address" data-validate="validate(required, email)"/>
+                                        <button type="submit">보내기</button>
+                                        <span id="result" class="section-description"></span>
+                                    </form> 
+                                </div>
+                            </div> 
+                            <p>안녕하세요! 저희는 새로운 구독 서비스를 소개하고자 합니다.<br> 이 서비스는 여러분의 일상을 보다 풍요롭고 흥미로운 경험으로 바꿔줄 것입니다.</p> 
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <h4>TrendFit</h4>
+                            <div class="single-tweet">
+                                <div class="tweet-content"><span>만든이 :</span> 이재민, 이승주</div>
+                            </div>
+                            <div class="single-tweet">
+                                <div class="tweet-content"><span>학번 :</span> 2019141002, 2019141054</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                    <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova" class="theme-author">Veronika Poljakova</a> &amp; Developed by <a href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+                </div>
+            </div>
+
+        </footer>
+        <!-- 푸터 끝 -->
+
+    </div><!-- body 컨테이너 끝 -->
+
+        <!-- 자바 스크립트 -->
+		<script src="../static/inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="../static/inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/inc/owl-carousel/js/owl.carousel.min.js"></script>
+		<script src="../static/inc/stellar/js/jquery.stellar.min.js"></script>
+		<script src="../static/inc/animations/js/wow.min.js"></script>
+        <script src="../static/inc/waypoints.min.js"></script>
+		<script src="../static/inc/isotope.pkgd.min.js"></script>
+		<script src="../static/inc/classie.js"></script>
+		<script src="../static/inc/jquery.easing.min.js"></script>
+		<script src="../static/inc/jquery.counterup.min.js"></script>
+		<script src="../static/inc/smoothscroll.js"></script>
+		<script src="../static/js/theme.js"></script>
+</body>
+</html>

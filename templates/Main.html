@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="kr">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Trend FIT 메인페이지</title>
+		<meta name="description" content="Unika - Responsive One Page HTML5 Template">
+		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
+		<meta name="author" content="imransdesign.com">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../static/inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/inc/animations/css/animate.min.css">
+		<link rel="stylesheet" href="../static/inc/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.theme.css">
+
+        <link rel="stylesheet" href="../static/css/reset.css">
+		<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" href="../static/css/mobile.css">
+
+		<link rel="stylesheet" href="../static/css/skin/cool-gray.css">
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/52c8e90544.js" crossorigin="anonymous"></script>
+
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader"></div>  <!-- 로딩 화면 -->
+    	<div class="body">
+        
+            <!--========== 헤더 ==========-->
+            <header id="header" class="header-main">
+
+  <!-- 상단 네비게이션 -->
+  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+
+    <div class="container">
+      
+      <!-- 로고 -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="Main.html">Trend fit</a>
+        </div>
+
+      <!-- 스크롤 이동 -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a class="page-scroll" href="#portfolio-section">Best 상품</a></li>
+              <li><a class="page-scroll" href="#services-section">카테고리</a></li>
+              <li><a class="page-scroll" href="#team-section">브랜드관</a></li>                            
+              <li><a class="page-scroll" href="Board.html">게시판</a></li>
+              {% if userid %}
+                <li><a>{{ userid }}님</a></li>
+                <li><a href="/logout">로그아웃</a></li>
+              {% else %}
+                <li><a href="Login.html">로그인</a></li>
+              {% endif %}
+          </ul>
+      </div><!-- 스크롤 이동 끝 -->
+    </div>
+  </nav>
+  <!-- 네비게이션 끝 -->
+
+</header>
+
+            <!-- ========= 헤더 끝 =========-->
+            
+            
+            
+        	<!-- 첫 인트로 페이지 -->
+			<section>
+				
+				<div class="container" style="padding: 25px;">
+                    <h2>헉 들켰다.</h2>  
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                      <!-- 지표 -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+                  
+                      <!-- 슬라이드 -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="../static/img/intro/1.png" alt="slider1" style="width:100%;">
+                        </div>
+                  
+                        <div class="item">
+                          <img src="../static/img/intro/2.png" alt="slider2" style="width:100%;">
+                        </div>
+                      
+                        <div class="item">
+                          <img src="../static/img/intro/3.png" alt="slider3" style="width:100%;">
+                        </div>
+                      </div>
+                  
+                      <!-- 슬라이더 이벤트 -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">이전</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">다음</span>
+                      </a>
+                    </div>
+                  </div>
+
+			</section>
+			<!-- 인트로 끝 -->              
+
+
+
+            <!-- Best 상품 -->
+            <section id="portfolio-section" class="page bg-style1">
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portfolio">
+                                <!-- Best 상품 헤더 -->
+                                <div class="page-header-wrapper">
+                                    <div class="container">
+                                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                            <h2>BEST 상품</h2>
+                                            <div class="devider"></div>
+                                            <p class="subtitle">Best 판매 상품으로 판매량이 가장 많은 상품 보기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Best 상품 헤더 끝 -->
+                                <div class="portfoloi_content_area" >
+                                    <div class="portfolio_menu" id="filters">
+                                        <ul>
+                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">전체보기</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".Men">남성 의류</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".Women" >여성 의류</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".Accessories">악세사리</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".Beg">가방</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="portfolio_content">
+                                        <div class="row"  id="portfolio">
+                                            <div class="col-xs-12 col-sm-4 Men">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p1.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub1.html">1위 강연코튼 케이블 펀칭 카라 니트</a>
+                                                        <span>다용도성과 편안함을 우선순위로<br>차분하고 편안한 소재의 베이식<br>Summer 하프니트 시리즈<br><br>30,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Women">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p2.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub2.html">2위 아리아 슬릿 드레스</a>
+                                                        <span>레글런 퍼프 소매와 앞면<br> 슬릿 디테 활동성 일이 특징시원한 터치감과<br> 구김이 적은 소재감으로높은 디자인<br><br>188,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Men Women">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p3.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub3.html">3위 와이드 데님 팬츠</a>
+                                                        <span>와이드한 핏감과 탄탄한 데님 소재의<br> 적당한 두께감으로 사계절 내내 착용하실 수 있으며<br> 발등을 살짝 덮는 기장감과 툭 떨어지는 매력적인 팬츠<br><br>49,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Men">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p4.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub4.html">4위 울버린 피그먼트 반팔티 블랙 차콜</a>
+                                                        <span>천연 염료를 사용하여 고온으로 의복 색을<br> 입히는 염색 공정인 피그먼트 워싱 사용<br> 기장과 폭의 균형을 맞추어 보다 편안하고 <br>안정감 있는 오버핏 반팔티<br><br>39,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Women">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img//portfolio/p5.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub5.html">5위 Sopy Collar Short-Sleeve BLACK</a>
+                                                        <span>목선이 길어보이는 오픈 카라 디자인으로 <br>체형 보완에 효과적이고 밑단 부드러운 라운딩으로 <br>슬림한 웨이스트라인 연출<br><br>45,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Men">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p6.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub6.html">6위 로버스트 헤비 오버핏 반팔티셔츠</a>
+                                                        <span>새로운 소재와 컬러감으로 포인트를 주고 <br>장식만 최소화 시켜 제품의 본질에 의미를 둔 티셔츠 <br>소재,패턴,컬러로 미니멀프로젝트만의 무드를 연출<br><br> 35,800원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Men Women">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p7.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub7.html">7위 원턱 와이드 스웨트팬츠</a>
+                                                        <span>Cotton Mesh 원단으로 사계절 내내 입을 수 있고 <br>발을 덮는 기장감과 답답하지 않은 디자인<br><br>52,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Accessories">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p8.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub8.html">8위 사피아노 신세틱 레더 벨트</a>
+                                                        <span>베이식한 디자인의 사피아노 레더 벨트로 <br>포멀 룩부터 캐주얼 룩가지 다양하게 활용할 수 있는 <br>형태로 개발한 버클은 도금 후 표면을 새틴 가공으로 <br>마무리해 고급스러움을 더한 디자인<br><br>15,900원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 Beg">
+                                                <div class="portfolio_single_content">
+                                                    <img src="../static/img/portfolio/p9.jpg" alt="title"/>
+                                                    <div>
+                                                        <a href="Sub9.html">9위 오블롱백 미니</a>
+                                                        <span>자연스러운 오일 광택감과 링클이 멋스러움<br> 스크래치에 강한 소재로 두가지 마그네틱 클로징으로 <br>소지품 양에 따라 슬림,와이드 폭 2way 활용 <br><br>96,000원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Best 상품 끝 -->
+             
+
+            
+            <!-- 카테고리 -->
+            <section id="services-section" class="page text-center">
+              <!-- 카테고리 헤더-->
+              <div class="page-header-wrapper">
+                  <div class="container">
+                      <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                          <h2>카테고리</h2>
+                          <div class="devider"></div>
+                          <p class="subtitle">인기상품 카테고리별로 보기</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- 카테고리 헤더 끝-->
+          
+
+              <!-- 카테고리 내용 -->
+              <div class="rotate-box-2-wrapper">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-3 col-sm-6">
+                              <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
+                                  <span class="rotate-box-icon"><i class="fa fa-male"></i></span>
+                                  <div class="rotate-box-info">
+                                      <h4>남성 의류</h4>
+                                  </div>
+                              </a>
+                          </div>
+          
+                          <div class="col-md-3 col-sm-6">
+                              <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
+                                  <span class="rotate-box-icon"><i class="fa fa-female"></i></span>
+                                  <div class="rotate-box-info">
+                                      <h4>여성 의류</h4>
+                                  </div>
+                              </a>
+                          </div>
+          
+                          <div class="col-md-3 col-sm-6">
+                              <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
+                                  <span class="rotate-box-icon"><i class="fa fa-diamond"></i></span>
+                                  <div class="rotate-box-info">
+                                      <h4>악세서리</h4>
+                                  </div>
+                              </a>
+                          </div>
+                          
+                          <div class="col-md-3 col-sm-6">
+                              <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s">
+                                  <span class="rotate-box-icon"><i class="fa fa-calendar-o"></i></span>
+                                  <div class="rotate-box-info">
+                                      <h4>가방</h4>
+                                  </div>
+                              </a>
+                          </div>
+                          
+                      </div>
+                  </div>                 
+              </div>
+              <!-- 카테고리 내용 끝 -->
+          </section>
+          <!-- 카테고리 끝 -->
+
+
+
+            <!-- 브랜드관 -->
+            <section id="team-section" class="page">
+                <!-- 브랜드관 헤더 -->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>브랜드관</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">브랜드별 인기 의류 보기</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 브랜드관 헤더 끝 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="team-items">
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.2s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://draw-fit.com/#firstPage">
+                                                    <img src="../static/img/team/3.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>DRAW FIT 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.3s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://avandress.com/">
+                                                    <img src="../static/img/team/4.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>Avandress 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.4s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://satur.co.kr/">
+                                                    <img src="../static/img/team/5.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>SATUR 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.5s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://www.nbkorea.com/index.action?&utm_source=google&utm_medium=sa&utm_campaign=2_MO_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=NEWBALANCE&_C_=&gad=1&gclid=CjwKCAjwp6CkBhB_EiwAlQVyxUskDofh7imf7Pd9wtCGUUmK-H0kl8n_Is34nYjwcLkLTxC9mMb9uBoCPrcQAvD_BwE">
+                                                    <img src="../static/img/team/6.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>new balance 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.6s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://matinkim.com/">
+                                                    <img src="../static/img/team/7.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>Matin Kim 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.7s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://dimitriblack.com/">
+                                                    <img src="../static/img/team/8.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>DIMITRI BLACK 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="team-container wow bounceIn" data-wow-delay="0.8s">
+                                    <div class="team-item">
+                                        <div class="team-triangle">
+                                            <div class="content">
+                                                <a href="https://global.mardimercredi.com/">
+                                                    <img src="../static/img/team/9.png" alt="title"/>
+                                                    <div class="team-hover text-center">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <p>Mardi Mercredi 보기</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>  
+                    </div>
+                </div>
+
+            </section>
+            <!-- 브랜드관 끝 -->
+                 
+
+            
+            <!-- 네트워크 -->
+			<section id="social-section">
+            
+                 <!-- 네트워크 헤더 -->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>네트워크</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">팔로우하고 새로운 정보 얻기</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 네트워크 헤더 끝-->
+                
+                <div class="container">
+                	<ul class="social-list">
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.3s"><span class="rotate-box-icon"><i class="fa fa-facebook"></i></span></a></li>
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.4s"><span class="rotate-box-icon"><i class="fa fa-twitter"></i></span></a></li>
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.5s"><span class="rotate-box-icon"><i class="fa fa-google-plus"></i></span></a></li>
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.6s"><span class="rotate-box-icon"><i class="fa fa-pinterest-p"></i></span></a></li>
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.7s"><span class="rotate-box-icon"><i class="fa fa-tumblr"></i></span></a></li>
+                		<li> <a href="#" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.8s"><span class="rotate-box-icon"><i class="fa fa-dribbble"></i></span></a></li>                      
+                    </ul>
+                </div>
+                
+            </section>
+            <!-- 네트워크 끝 -->
+                
+                
+
+                
+            <!-- 푸터 -->
+            <footer class="text-off-white">
+            
+                <div class="footer-top">
+                	<div class="container">
+                    	<div class="row wow bounceInLeft" data-wow-delay="0.4s">
+
+                            <div class="col-sm-6 col-md-4">
+                            	<h4>자주하는 질문</h4>
+                                <ul class="imp-links">
+                                	<li><a href="">고객센터</a></li>
+                                	<li><a href="">서비스 약관</a></li>
+                                	<li><a href="">저작권 약관</a></li>
+                                	<li><a href="">정보관리 약관</a></li>
+                                	<li><a href="">오시는 길</a></li>
+                                </ul>
+                            </div>
+                        
+                        	<div class="col-sm-6 col-md-4">
+                                <h4>구독하기</h4>
+                            	<div id="footer_signup">
+                                    <div id="email">
+                                        <form id="subscribe" method="POST">
+                                            <input type="text" placeholder="email을 입력하세요" name="email" id="address" data-validate="validate(required, email)"/>
+                                            <button type="submit">보내기</button>
+                                            <span id="result" class="section-description"></span>
+                                        </form> 
+                                    </div>
+                                </div> 
+                                <p>안녕하세요! 저희는 새로운 구독 서비스를 소개하고자 합니다.<br> 이 서비스는 여러분의 일상을 보다 풍요롭고 흥미로운 경험으로 바꿔줄 것입니다.</p> 
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <h4>TrendFit</h4>
+                                <div class="single-tweet">
+                                    <div class="tweet-content"><span>만든이 :</span> 이재민, 이승주</div>
+                                </div>
+                                <div class="single-tweet">
+                                    <div class="tweet-content"><span>학번 :</span> 2019141002, 2019141054</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova" class="theme-author">Veronika Poljakova</a> &amp; Developed by <a href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- 푸터 끝 -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- 위로가는 스크롤 버튼 -->
+                                              
+        </div><!-- body 컨테이너 끝 -->
+        
+        
+        
+        
+        <!-- 자바 스크립트 -->
+		<script src="../static/inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="../static/inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/inc/owl-carousel/js/owl.carousel.min.js"></script>
+		<script src="../static/inc/stellar/js/jquery.stellar.min.js"></script>
+		<script src="../static/inc/animations/js/wow.min.js"></script>
+        <script src="../static/inc/waypoints.min.js"></script>
+		<script src="../static/inc/isotope.pkgd.min.js"></script>
+		<script src="../static/inc/classie.js"></script>
+		<script src="../static/inc/jquery.easing.min.js"></script>
+		<script src="../static/inc/jquery.counterup.min.js"></script>
+		<script src="../static/inc/smoothscroll.js"></script>
+		<script src="../static/js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>

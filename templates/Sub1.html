@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trend Fit 상세페이지</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../static/inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/inc/animations/css/animate.min.css">
+		<link rel="stylesheet" href="../static/inc/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="../static/inc/owl-carousel/css/owl.theme.css">
+
+        <link rel="stylesheet" href="../static/css/reset.css">
+		<link rel="stylesheet" href="../static/css/sub.css">
+		<link rel="stylesheet" href="../static/css/mobile.css">
+
+		<link rel="stylesheet" href="../static/css/skin/cool-gray.css">
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+    <div class="page-loader"></div>  <!-- 로딩 화면 -->
+    <div class="body">
+    
+        <!--========== 헤더 ==========-->
+        <header id="header" class="header-main">
+
+            <!-- 상단 네비게이션 -->
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+
+              <div class="container">
+                
+                <!-- 로고 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="Main.html">Trend fit</a>
+                  </div>
+
+                <!-- 스크롤 이동 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">                           
+                        <li><a class="page-scroll" href="Board.html">게시판</a></li>
+                        {% if userid %}
+                        <li><a>{{ userid }}님</a></li>
+                        <li><a href="/logout">로그아웃</a></li>
+                        {% else %}
+                        <li><a href="Login.html">로그인</a></li>
+                        {% endif %}
+                    </ul>
+                </div><!-- 스크롤 이동 끝 -->
+              </div>
+            </nav>
+            <!-- 네비게이션 끝 -->
+
+        </header>
+        <!-- ========= 헤더 끝 =========-->
+
+
+
+
+        <!-- ========= 상세페이지 내용 =========-->
+        <section>
+            <div class="container" style="padding: 25px;">
+                <div class="sub-box">
+                    <div class="sub-img">
+                        <img src="../static/img/portfolio/p1.jpg"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="sub-btn">
+                        <button class="sub-btn1" type="button">구매하기</button>
+                        <button class="sub-btn2" type="button">장바구니</button>
+                    </div>
+                </div>
+                <div class="sub-text1">
+                    [미나브X깡스타일리스트] 강연코튼 케이블 펀칭 카라 니트 [코발트블루]
+                </div>
+                <hr class="cut" />
+                <div class="sub-text2">제품 정보</div>
+                <div class="sub-info">
+                    <ul class="Q1">
+                        <li>브랜드 / 품번</li>
+                        <li>시즌 / 성별</li>
+                        <li>조회수</li>
+                        <li>누적판매</li>
+                        <li>좋아요</li>
+                        <li>구매 후기</li>
+                    </ul>
+                    <ul class="A1">
+                        <li> MINAV / MMFSMYT123 </li>
+                        <li> 2023 S/S / 남 </li>
+                        <li> 7.4만 회 이상 </li>
+                        <li> 4.1천 개 이상(결제완료-반품) </li>
+                        <li> 3,974 </li>
+                        <li> 후기 1423 </li>
+                    </ul>
+                </div>
+                <hr class="cut" />
+                <div class="sub-text2">가격 정보</div>
+                <div class="sub-price">
+                    <ul class="Q1">
+                        <li>판매가</li>
+                        <li>할인가</li>
+                        <li>적립금</li>
+                    </ul>
+                    <ul class="A1">
+                        <li>82,000</li>
+                        <li>30,000</li>
+                        <li>150</li>
+                    </ul>
+                </div>
+                <hr class="cut2" />
+                <div class="sub-text3">배송 정보</div>
+                <div class="sub-move">
+                    <ul class="Q1">
+                        <li>출고 정보</li>
+                        <li>배송 정보</li>
+                    </ul>
+                    <ul class="A1">
+                        <li>결제 3일 이내 출고</li>
+                        <li>국내 배송 / 입점사 배송 / 우체국택배</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="sub-bg">
+                    <img src="../static/img/sub/1.jpg"/>
+                    <img src="../static/img/sub/2.jpg"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= 상세페이지 내용 끝 =========-->
+
+
+
+        <!-- 푸터 -->
+        <footer class="text-off-white">
+            
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row wow bounceInLeft" data-wow-delay="0.4s">
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4>자주하는 질문</h4>
+                            <ul class="imp-links">
+                                <li><a href="">고객센터</a></li>
+                                <li><a href="">서비스 약관</a></li>
+                                <li><a href="">저작권 약관</a></li>
+                                <li><a href="">정보관리 약관</a></li>
+                                <li><a href="">오시는 길</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="col-sm-6 col-md-4">
+                            <h4>구독하기</h4>
+                            <div id="footer_signup">
+                                <div id="email">
+                                    <form id="subscribe" method="POST">
+                                        <input type="text" placeholder="email을 입력하세요" name="email" id="address" data-validate="validate(required, email)"/>
+                                        <button type="submit">보내기</button>
+                                        <span id="result" class="section-description"></span>
+                                    </form> 
+                                </div>
+                            </div> 
+                            <p>안녕하세요! 저희는 새로운 구독 서비스를 소개하고자 합니다.<br> 이 서비스는 여러분의 일상을 보다 풍요롭고 흥미로운 경험으로 바꿔줄 것입니다.</p> 
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <h4>TrendFit</h4>
+                            <div class="single-tweet">
+                                <div class="tweet-content"><span>만든이 :</span> 이재민, 이승주</div>
+                            </div>
+                            <div class="single-tweet">
+                                <div class="tweet-content"><span>학번 :</span> 2019141002, 2019141054</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                    <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova" class="theme-author">Veronika Poljakova</a> &amp; Developed by <a href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+                </div>
+            </div>
+
+        </footer>
+        <!-- 푸터 끝 -->
+
+    </div><!-- body 컨테이너 끝 -->
+
+        <!-- 자바 스크립트 -->
+		<script src="../static/inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="../static/inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/inc/owl-carousel/js/owl.carousel.min.js"></script>
+		<script src="../static/inc/stellar/js/jquery.stellar.min.js"></script>
+		<script src="../static/inc/animations/js/wow.min.js"></script>
+        <script src="../static/inc/waypoints.min.js"></script>
+		<script src="../static/inc/isotope.pkgd.min.js"></script>
+		<script src="../static/inc/classie.js"></script>
+		<script src="../static/inc/jquery.easing.min.js"></script>
+		<script src="../static/inc/jquery.counterup.min.js"></script>
+		<script src="../static/inc/smoothscroll.js"></script>
+		<script src="../static/js/theme.js"></script>
+</body>
+</html>
