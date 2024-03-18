@@ -15,7 +15,7 @@
 
 <h1>Intro</h1><br>
 
-jquery와 bootstrap을 주로 프론트 위주로 설계한 세미 프로젝트입니다<br><br>
+jquery와 bootstrap을 주로 프론트와 SQLite로 로그인만 설계한 토이 프로젝트입니다<br><br>
 
 제가 PM을 맏았으며 프론트엔드 95% 이상 백엔드 100% 구현했습니다<br><br>
 
