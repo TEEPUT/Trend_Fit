@@ -1,4 +1,4 @@
-<h1>Stack</h1><br>
+<h1>📌 Stack</h1><br>
 <div align=center> 
   <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
   <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"> 
@@ -13,14 +13,14 @@
 </div>
 
 
-<h1>Intro</h1><br>
+<h1>📌 Intro</h1><br>
 
 jquery와 bootstrap을 주로 프론트와 SQLite로 로그인만 설계한 토이 프로젝트입니다<br><br>
 
 백엔드는 SQLite 를 사용해서 회원가입과 로그인 기능만 구현했습니다<br><br>
 
 
-<h1>Implementation</h1><br>
+<h1>📌 Implementation</h1><br>
 <h2>Frontend</h2>
 <div align="center">
 
@@ -90,7 +90,7 @@ Flask 메인 창이며 라우터 정의와 데이터 방식을 주고 받은 Con
 데이터베이스를 만들는 역할과 입력하는 역할이며 이곳에서 비밀번호를 해시화 해서 데이터베이스에 저장가능하도록 합니다
 
 <br><br>
-<h1> Last </h1><br>
+<h1>📌 Last </h1><br>
 
 [https://teeput.pythonanywhere.com/Login.html](https://teeput.pythonanywhere.com/Main.html)https://teeput.pythonanywhere.com/Main.html
 
